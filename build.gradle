@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.parchmentmc:librarian:1.+'
+        classpath 'org.spongepowered:mixingradle:0.7.+'
     }
 }
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -18,6 +19,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'org.spongepowered.mixin'
 
 version = '0.1'
 group = 'com.spoilers.arcanearrays' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -28,7 +30,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-
+	
+	//mappings channel: 'official', version: '1.18.1'
     mappings channel: 'parchment', version: '2022.05.22-1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
@@ -129,13 +132,13 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-     flatDir {
-         dir 'libs'
-     }
-  maven { 
-   	name = "curios maven"
-   	url 'https://maven.theillusivec4.top/' 
-  }
+	flatDir {
+		dir 'libs'
+	}
+	maven { 
+		name = "curios maven"
+		url 'https://maven.theillusivec4.top/' 
+	}
 	maven { 
 		name = "geckolib maven"
 		url 'https://repo.repsy.io/mvn/gandiber/geckolib'
@@ -153,9 +156,13 @@ repositories {
 dependencies {
     
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.31'
+    
+    //annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     compileOnly 'blank:mna:1.7.1.20:api' //api, compilation only
     runtimeOnly fg.deobf('blank:mna:1.7.2.2') //mod itself, deobf for runtime
+    
+    //implementation fg.deobf('blank:mna:1.7.2.2')
 
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.7.0")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.18.2-5.0.7.0:api")
@@ -165,6 +172,11 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195")
 }
+
+/*mixin {
+	add sourceSets.main, 'arcanearrays.refmap.json'
+    config 'arcanearrays.mixins.json'
+}*/
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
