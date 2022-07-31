@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+  	"minecraft:scute",
+  	"minecraft:shulker_shell",
+    "mna:constructs/construct_shield_arm_left_wood",
+    "mna:constructs/construct_shield_arm_right_wood",
+    "mna:constructs/construct_shield_arm_left_stone",
+    "mna:constructs/construct_shield_arm_right_stone",
+    "mna:mote_arcane",
+    "mna:mote_earth"
+  ]
+}

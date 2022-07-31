@@ -1,0 +1,69 @@
+{
+	"ArrayCreation": {
+    "index": 0,
+    "category": "rituals",
+    "sections": [
+      {
+        "type": "title",
+        "value": "[Arrays]Ritual of Array Construction"
+      },
+      {
+        "type": "text",
+        "value": "alpha version guide information: ritual creates an array core and four array foci"
+      },
+      {
+        "type": "text",
+        "value": "This ritual will require 4 Pedestals placed 3 blocks out from the center of the ritual- it will inform you of coordinates if theyre missing -->"
+      },
+      {
+		"type": "image",
+		"location": "arcanearrays:textures/guide/createarray/createarray.png",
+		"width": 128,
+		"height": 128
+	  },
+      {
+        "type": "text",
+        "value": "The ritual will provide appropriate feedback should any of the requirements be unmet when attempting to start it.",
+        "newPage" : true
+      },
+      {
+        "type": "text",
+        "value": "there are two 'implemented' array arrangements which are the targetting mechanic of the array, the arrangement is determined by items placed on the ritual pedestals, each arrangement has a set of viable items that identify it"
+      },
+      {
+        "type": "text",
+        "value": "The offensive arrangement targets enemies- other players and monsters- the reagents you can use in the ritual are determined by the #offensive_arrangement tag and include tridents, diamond swords, minor motes of fire or ender or wood/stone construct blade arms"
+      },
+      {
+        "type": "text",
+        "value": "The defensive arrangement targets the caster and allies- the reagents you can use in the ritual are determined by the #defensive_arrangement tag and include scutes, shulker shells, minor motes of arcane or earth or wood/stone construct shield arms"
+      },
+      {
+        "type": "text",
+        "value": "There are currently three* array functions, each function is determined by casting a corresponding spell on one of the array focii, array functions only apply while an array is active. arrays can be activated by using a vinteum or chimerite manaweavers wand"
+      },
+      {
+        "type": "text",
+        "value": "casting a spell with break on an array focus will give the array the break prevention function. this function -while the array is active- will prevent all block breaking by other players within a 32 block radius"
+      },
+      {
+        "type": "text",
+        "value": "casting a spell with explosion on an array focus will give the array the explosion prevention function. this function -while the array is active- will prevent all explosions within a 32 block radius"
+      },
+      {
+        "type": "text",
+        "value": "casting a spell that grants a potion effect on an array focus will give the array the 'effect application' function. this function -while the array is active- will apply the chosen potion effect to entities in a 32 block radius depending on the arrangement"
+      },
+      {
+      	"type": "text",
+      	"value": "i claim no guarantees of stability"
+      }
+    ],
+	"related_recipes": [
+	  {
+		"type": "ritual",
+		"location": "arcanearrays:rituals/create_array"
+	  }
+	]
+  }
+}

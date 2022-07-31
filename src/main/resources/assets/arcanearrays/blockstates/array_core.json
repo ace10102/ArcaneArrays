@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "active=false": { "model": "arcanearrays:block/array_core"},
+    "active=true": { "model": "arcanearrays:block/array_core"}
+  }
+}

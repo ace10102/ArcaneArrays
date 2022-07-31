@@ -2,11 +2,9 @@ package com.spoilers.arcanearrays.capabilities.world;
 
 import java.util.concurrent.Callable;
 
-public final class ArrayCapFactory
-implements Callable<ArrayCap> {
+public final class ArrayCapFactory implements Callable<ArrayRegistryCapability> {
     @Override
-    public ArrayCap call() throws Exception {
-        return new ArrayCap();
+    public ArrayRegistryCapability call() throws Exception {
+        return new ArrayRegistryCapability();
     }
 }
-

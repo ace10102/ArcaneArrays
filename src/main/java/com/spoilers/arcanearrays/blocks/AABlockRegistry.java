@@ -7,12 +7,11 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class AABlocks {
+public class AABlockRegistry {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ArcaneArrays.MOD_ID);
-    /* Blocks */
-        // Test
-    public static final RegistryObject<Block> TESTCORE = BLOCKS.register("test_core", () -> new TestCore());
-        // Building
-    //public static final RegistryObject<Block> VINTEUM_POWDER = BLOCKS.register("vinteum_powder", () -> new FallingBlock(Block.Properties.copy(Blocks.SAND)));
+    /* Array Cores */
+    public static final RegistryObject<Block> ARRAY_CORE = BLOCKS.register("array_core", () -> new ArrayCore());
+    public static final RegistryObject<Block> ARRAY_FOCUS = BLOCKS.register("array_focus", () -> new ArrayFocus());
+
 }

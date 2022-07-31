@@ -1,0 +1,7 @@
+{
+	"arcanearrays:rituals/create_array":"Ritual of Array Construction",
+	
+	"ritual.arcanearrays.no_pedestal":"Missing a Pedestal at [%s]",
+	"ritual.arcanearrays.no_pedestal_item":"Missing an Arrangement Item on the Pedestal at [%s]",
+	"ritual.arcanearrays.wrong_pedestal_item":"Incorrect Arrangement Item"
+}

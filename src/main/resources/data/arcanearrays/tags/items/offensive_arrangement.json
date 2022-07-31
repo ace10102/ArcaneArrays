@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:trident",
+    "minecraft:diamond_sword",
+    "mna:constructs/construct_mana_cannon_left_wood",
+    "mna:constructs/construct_mana_cannon_right_wood",
+    "mna:constructs/construct_mana_cannon_left_stone",
+    "mna:constructs/construct_mana_cannon_right_stone",
+    "mna:mote_fire",
+    "mna:mote_ender"
+  ]
+}
